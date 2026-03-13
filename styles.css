@@ -1,0 +1,30 @@
+body{
+
+background:linear-gradient(#7fd8ff,#1e90ff);
+font-family:Verdana;
+text-align:center;
+
+}
+
+.container{
+
+background:white;
+width:400px;
+margin:auto;
+padding:20px;
+border-radius:15px;
+box-shadow:0 0 20px rgba(0,0,0,0.4);
+
+}
+
+button{
+
+background:linear-gradient(#6ee7ff,#0099cc);
+border:none;
+padding:10px 20px;
+border-radius:10px;
+color:white;
+font-size:16px;
+cursor:pointer;
+
+}
