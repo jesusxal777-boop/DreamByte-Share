@@ -2,107 +2,103 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
 body{
+    background:#0f1117;
+    color:white;
     min-height:100vh;
 
     display:flex;
     justify-content:center;
     align-items:center;
 
-    font-family:Verdana, sans-serif;
+    overflow:hidden;
+}
+
+.background{
+    position:absolute;
+    width:100%;
+    height:100%;
 
     background:
-    radial-gradient(circle at top left, #7fd8ff55, transparent 30%),
-    radial-gradient(circle at bottom right, #1e90ff55, transparent 30%),
-    linear-gradient(135deg, #0f172a, #111827);
+    radial-gradient(circle at top left,#6c63ff33,transparent 30%),
+    radial-gradient(circle at bottom right,#00d4ff22,transparent 30%);
 
-    overflow:hidden;
-
-    color:white;
+    z-index:-1;
 }
 
 .container{
-    width:90%;
-    max-width:450px;
-
-    padding:35px;
-
-    border-radius:20px;
-
-    background:rgba(255,255,255,0.08);
-
-    backdrop-filter:blur(12px);
+    background:rgba(255,255,255,0.05);
 
     border:1px solid rgba(255,255,255,0.1);
 
-    box-shadow:
-    0 0 30px rgba(0,0,0,0.4),
-    inset 0 0 10px rgba(255,255,255,0.05);
+    backdrop-filter:blur(12px);
+
+    padding:40px;
+
+    border-radius:20px;
+
+    width:90%;
+    max-width:500px;
 
     text-align:center;
 
-    animation:fadeIn 0.6s ease;
+    box-shadow:0 0 25px rgba(0,0,0,0.4);
 }
 
 h1{
-    font-size:2.5rem;
+    font-size:3rem;
     margin-bottom:10px;
-
-    background:linear-gradient(90deg,#7fd8ff,#4facfe);
-
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
 }
 
 p{
-    color:#cbd5e1;
-    margin-bottom:25px;
-    line-height:1.5;
+    color:#bdbdbd;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
 }
 
 button{
-    width:100%;
-
-    padding:14px;
-
-    margin-top:12px;
+    padding:15px;
 
     border:none;
-    border-radius:14px;
+    border-radius:12px;
 
-    background:linear-gradient(135deg,#38bdf8,#2563eb);
+    background:#6c63ff;
 
     color:white;
 
-    font-size:16px;
-    font-weight:bold;
+    font-size:1rem;
 
     cursor:pointer;
 
-    transition:0.25s;
+    transition:0.2s;
 }
 
 button:hover{
-    transform:translateY(-2px) scale(1.02);
+    transform:scale(1.03);
 
-    box-shadow:
-    0 10px 20px rgba(37,99,235,0.4);
+    background:#7d75ff;
 }
 
-button:active{
-    transform:scale(0.98);
+.secondary{
+    background:#1f2430;
 }
 
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
+.secondary:hover{
+    background:#2b3140;
+}
 
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+footer{
+    margin-top:25px;
+
+    font-size:0.8rem;
+
+    color:#777;
 }
