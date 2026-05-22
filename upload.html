@@ -1,9 +1,48 @@
-<h2>Subir archivo</h2>
+<div class="upload-container">
 
-<input type="file" id="file">
+    <h2>📤 Subir archivo</h2>
 
-<input type="text" placeholder="Descripción">
+    <p class="subtitle">
+        Comparte tus proyectos, mods, apps y creaciones en DreamByte Share.
+    </p>
 
-<button onclick="uploadFile()">
-Subir
-</button>
+    <div class="upload-box">
+
+        <label for="file" class="file-label">
+            📁 Elegir archivo
+        </label>
+
+        <input type="file" id="file">
+
+        <span id="file-name">
+            Ningún archivo seleccionado
+        </span>
+
+    </div>
+
+    <textarea 
+        placeholder="Escribe una descripción del archivo..."
+        maxlength="250"
+        id="description"
+    ></textarea>
+
+    <button onclick="uploadFile()">
+        🚀 Subir archivo
+    </button>
+
+</div>
+
+<script>
+const fileInput = document.getElementById("file");
+const fileName = document.getElementById("file-name");
+
+fileInput.addEventListener("change", () => {
+
+    if(fileInput.files.length > 0){
+        fileName.textContent = fileInput.files[0].name;
+    }else{
+        fileName.textContent = "Ningún archivo seleccionado";
+    }
+
+});
+</script>
